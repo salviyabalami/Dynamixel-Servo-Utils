@@ -1,7 +1,7 @@
 # Dynamixel Servo Utilities
 
 A collection of Python scripts for working with **Dynamixel servos** (tested on XL330 series with U2D2, Protocol 2.0).  
-Includes utilities for scanning connected servos, changing IDs, and recovering misconfigured or “lost” servos.  
+Includes utilities for scanning connected servos, changing IDs, recovering misconfigured servos, health checks, and simple ping/read diagnostics.
 
 ---
 
@@ -16,6 +16,12 @@ Includes utilities for scanning connected servos, changing IDs, and recovering m
 
 - **`recover.py`**  
   Attempts to find and recover a misconfigured servo by scanning across common baud rates.
+
+- **`health_check.py`**  
+  Performs a quick diagnostic on each detected servo (temperature, voltage, error flags, etc.) to verify that it is operating within safe ranges.
+
+- **`ping_and_read.py`**  
+  Pings a servo by ID and reads basic control table values such as present position, velocity, and torque state. Useful for verifying communication with individual servos.
 
 ---
 
