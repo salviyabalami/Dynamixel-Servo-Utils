@@ -78,7 +78,7 @@ Use your terminal to find the device name:
 - ls /dev/ttyUSB*
 # Example result: /dev/ttyUSB0
 ```
-- **Windows
+- **Windows**
   Open Device Manager → Expand Ports (COM & LPT) → look for USB Serial Port (COM3) or similar.
 
 ### 4) Update the PORT value in the scripts
