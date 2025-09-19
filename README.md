@@ -21,9 +21,6 @@ Includes utilities for scanning connected servos, changing IDs, recovering misco
   Performs a quick diagnostic on each detected servo (temperature, voltage, error flags, etc.) to verify that it is operating within safe ranges.
 
 - **`ping_and_read.py`**  
-  Pings a servo by ID and reads basic control table values such as present position, velocity, and torque state. Useful for verifying communication with individual servos.
-
-- **`discover_and_read.py`**  
   Scans all IDs at the selected baud and prints live Present Position values for each detected servo. Useful for monitoring many servos simultaneously.
 
 ---
