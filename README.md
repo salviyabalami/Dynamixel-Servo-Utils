@@ -74,3 +74,22 @@ Use your terminal to find the device name:
   # Example result: /dev/cu.usbserial-FTAAMOEC
   ```
 - **Linux**
+ ```bash
+- ls /dev/ttyUSB*
+# Example result: /dev/ttyUSB0
+```
+- **Windows
+  Open Device Manager → Expand Ports (COM & LPT) → look for USB Serial Port (COM3) or similar.
+
+### 4) Update the PORT value in the scripts
+Open the Python script you plan to run (e.g., scan_servos.py) and set the PORT constant to the device you found in step 3.
+```bash
+# macOS example:
+PORT = "/dev/cu.usbserial-FTAAMOEC"
+
+# Linux example:
+PORT = "/dev/ttyUSB0"
+
+# Windows example:
+PORT = "COM3"
+```
