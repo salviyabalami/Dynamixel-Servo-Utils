@@ -69,5 +69,8 @@ pip install -r requirements.txt
 Use your terminal to find the device name:
 
 - **macOS**
+  ```bash
   ls /dev/tty.usb* /dev/cu.usb* 2>/dev/null
   # Example result: /dev/cu.usbserial-FTAAMOEC
+  ```
+- **Linux**
