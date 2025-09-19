@@ -33,12 +33,13 @@ Includes utilities for scanning connected servos, changing IDs, recovering misco
 - Python **3.9+**
 - [dynamixel-sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK) (`pip install dynamixel-sdk`)
 - U2D2 or compatible USB-to-serial adapter
-- USB serial drivers (FTDI, CP210x, etc. depending on your OS)
+- USB serial drivers (FTDI, CP210x, etc., depending on your OS)
 
 ---
 
 ## 🔧 Installation & Setup
 
+### 1) Clone and install Python deps
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/dynamixel-utils.git
@@ -46,8 +47,28 @@ cd dynamixel-utils
 
 # (Optional) Create a virtual environment
 python3 -m venv venv
-source venv/bin/activate   # macOS/Linux
-venv\Scripts\activate      # Windows
+# macOS/Linux:
+source venv/bin/activate
+# Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install -r requirements.txt
+
+### 2) Hardware hookup (in this order)
+
+1. **Connect the servo to the U2D2** with the proper TTL cable (be sure the orientation matches the connector key).  
+2. **Connect external power to the U2D2** (barrel jack/terminal block) with a supply that matches your servo’s voltage spec.  
+   - ⚠️ Use the correct voltage and polarity per the servo datasheet.  
+3. **Connect the U2D2 to your computer** via USB.  
+
+---
+
+### 3) Determine which serial port the U2D2 is using
+
+Use your terminal to find the device name:
+
+- **macOS**
+  ```bash
+  ls /dev/tty.usb* /dev/cu.usb* 2>/dev/null
+  # Example result: /dev/cu.usbserial-FTAAMOEC
