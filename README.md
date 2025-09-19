@@ -54,7 +54,7 @@ source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
+```
 ### 2) Hardware hookup (in this order)
 
 1. **Connect the servo to the U2D2** with the proper TTL cable (be sure the orientation matches the connector key).  
@@ -69,6 +69,5 @@ pip install -r requirements.txt
 Use your terminal to find the device name:
 
 - **macOS**
-  ```bash
   ls /dev/tty.usb* /dev/cu.usb* 2>/dev/null
   # Example result: /dev/cu.usbserial-FTAAMOEC
