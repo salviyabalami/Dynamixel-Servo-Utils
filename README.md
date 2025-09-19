@@ -40,7 +40,7 @@ Includes utilities for scanning connected servos, changing IDs, recovering misco
 ## 🔧 Installation & Setup
 
 ### 1) Clone and install Python deps
-```bash
+
 # Clone the repository
 git clone https://github.com/yourusername/dynamixel-utils.git
 cd dynamixel-utils
